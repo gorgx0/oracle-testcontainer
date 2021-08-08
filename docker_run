@@ -1,6 +1,6 @@
 mkdir /tmp/docker
 sudo chown 54321  /tmp/oracle
-docker run --name oracle_xe -d -p 1521:1521 -p 5500:5500 -v /tmp/oracle:/opt/oracle/oradata -e ORACLE_PWD=password oracle_xe:18.4.0
+docker run --name oracle_xe  -p 1521:1521 -p 5500:5500 -v /home/gorg/tmp/testcontainers01/startup:/opt/oracle/scripts/startup  -v /tmp/oracle:/opt/oracle/oradata -e ORACLE_PWD=password oracle_xe:18.4.0
 
 
 CREATE USER user01 IDENTIFIED BY password;
