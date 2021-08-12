@@ -6,3 +6,10 @@ docker run --name oracle_xe  -p 1521:1521 -p 5500:5500 -v /home/gorg/tmp/testcon
 CREATE USER user01 IDENTIFIED BY password;
 GRANT CREATE SESSION TO user01;
 GRANT ALL PRIVILEGES TO user01;
+
+
+creating oracle PDB
+
+CREATE PLUGGABLE DATABASE pdb2 ADMIN USER pdb_adm IDENTIFIED BY Password1
+    CREATE_FILE_DEST='/opt/oracle/oradata/pdb2';
+
